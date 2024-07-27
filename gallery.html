@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            overflow: hidden; /* Hide scrollbar for the body */
+        }
+        .header {
+            position: fixed; /* Fix the header at the top */
+            top: 0;
+            left: 0;
+            width: 100%; /* Full width of the viewport */
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            z-index: 1000; /* Ensure it's above other content */
+            font-size: 16px; /* Adjust font size as needed */
+        }
+        .gallery-container {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            height: calc(100vh - 40px); /* Adjust height to account for header */
+            overflow-y: auto; /* Enable vertical scrolling */
+            margin-top: 40px; /* Add margin to prevent overlap with header */
+        }
+        .gallery-item {
+            margin: 0;
+            padding: 0;
+            border: none;
+            display: flex; /* Center image horizontally */
+            justify-content: center;
+            width: 100vw; /* Ensure the item takes full viewport width */
+        }
+        .gallery-item img {
+            display: block;
+            width: 100vw; /* Make images fill the viewport width */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 100vh; /* Ensure images do not exceed viewport height */
+            object-fit: cover;
+        }
+        .header a {
+            color: white; /* Text color */
+            text-decoration: none; /* Remove underline from link */
+            font-weight: bold; /* Make the text bold */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">Go Back</a>
+    </div>
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="images/bridge.png" alt="Bridge">
+        </div>
+        <div class="gallery-item">
+            <img src="images/cottage.png" alt="Cottage">
+        </div>
+        <div class="gallery-item">
+            <img src="images/ninja.png" alt="Ninja">
+        </div>
+        <div class="gallery-item">
+            <img src="images/koth1.png" alt="Koth1">
+        </div>
+        <div class="gallery-item">
+            <img src="images/koth2.png" alt="Koth2">
+        </div>
+        <div class="gallery-item">
+            <img src="images/logos.png" alt="Logos">
+        </div>
+        <div class="gallery-item">
+            <img src="images/tokyo.png" alt="Tokyo">
+        </div>
+        <div class="gallery-item">
+            <img src="images/grand.png" alt="Grand">
+        </div>
+        <div class="gallery-item">
+            <img src="images/hall.png" alt="Hall">
+        </div>
+        <div class="gallery-item">
+            <img src="images/tower.png" alt="Tower">
+        </div>
+        <!-- Repeat the above div for each image in your gallery -->
+    </div>
+</body>
+</html>

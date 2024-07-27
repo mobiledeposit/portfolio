@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exhibition Client</title>
+    <link rel="icon" href="./pastedassets/logo.png">
+    <link rel="stylesheet" href="./pastedassets/styles.css" type="text/css">
+    <script src="https://kit.fontawesome.com/94e2560058.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="./pastedassets/f12.js"></script>
+    <script src="./pastedassets/rand.js"></script>
+    <script src="./pastedassets/volume.js"></script>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .typewriter-line {
+            display: none;
+            white-space: pre-wrap;
+            overflow: hidden;
+        }
+        .typewriter-cursor {
+            display: inline-block;
+            border-right: 2px solid white;
+            animation: blink-caret 0.7s step-end infinite;
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        <div id="line1" class="typewriter-line"><a href="https://mobiledeposit.art">Mobiledeposit's Portfolio</a></div>
+        <div id="line2" class="typewriter-line">made by <a href="https://mobiledeposit.art">Mobiledeposit</a></div>
+        <div id="line3" class="typewriter-line"><b>-----------------------------</b></div>
+        <div id="line4" class="typewriter-line"><a style="color: #ff0000;">[VIEW BUILDING PROFILE]</a></div>
+        <div id="line5" class="typewriter-line"><a href="gallery.html">CLICK TO VIEW IMAGE GALLERY</a></div>
+        <div id="line6" class="typewriter-line"><b>-----------------------------</b></div>
+        <div id="line7" class="typewriter-line"><a style="color: #ff0000;">[CONTACT ME!]</a></div>
+        <div id="line8" class="typewriter-line"><i class="fab bruh fa-discord"></i> <a>Discord: @mobiledeposit</a></div>
+        <div id="line9" class="typewriter-line"><i class="fab bruh fa-telegram"></i> <a>Telegram: @Guncrimes</a></div>
+        <div id="line10" class="typewriter-line"><b>-----------------------------</b></div>
+        <div id="line11" class="typewriter-line"><b>[shoutout my fav servers]</b></div>
+        <div id="line12" class="typewriter-line"><b>- Quickdrop.gg</b></div>
+        <div id="line13" class="typewriter-line"><b>- Mcteams.com</b></div>
+        <div id="line14" class="typewriter-line"><b>- Mobpvp.com</b></div>
+        <div id="line15" class="typewriter-line"><b>- Blockgame.gg (RIP)</b></div>
+        <div id="line16" class="typewriter-line"><b>- Soup.gg (RIP)</b></div>
+        <div id="line17" class="typewriter-line"><b>- Souppvp.gg (RIP)</b></div>
+        <div id="line18" class="typewriter-line"><b>-----------------------------</b></div>
+        <div id="line19" class="typewriter-line"><b>[shoutout minemen]</b></div>
+        <div id="line20" class="typewriter-line"><b>- IVQT</b></div>
+        <div id="line21" class="typewriter-line"><b>- Yowwwww </b></div>
+        <div id="line22" class="typewriter-line"><b>- Vops</b></div>
+        <div id="line23" class="typewriter-line"><b>- Sownah</b></div>
+        <div id="line24" class="typewriter-line"><b>- Fortychew</b></div>
+
+    </pre>
+    <div class="typewriter-cursor"></div>
+    <script>
+        const lines = [
+            document.getElementById('line1'),
+            document.getElementById('line2'),
+            document.getElementById('line3'),
+            document.getElementById('line4'),
+            document.getElementById('line5'),
+            document.getElementById('line6'),
+            document.getElementById('line7'),
+            document.getElementById('line8'),
+            document.getElementById('line9'),
+            document.getElementById('line10'),
+            document.getElementById('line11'),
+            document.getElementById('line12'),
+            document.getElementById('line13'),
+            document.getElementById('line14'),
+            document.getElementById('line15'),
+            document.getElementById('line16'),
+            document.getElementById('line17'),
+            document.getElementById('line18'),
+            document.getElementById('line19'),
+            document.getElementById('line20'),
+            document.getElementById('line21'),
+            document.getElementById('line22'),
+            document.getElementById('line23'),
+            document.getElementById('line24')
+        ];
+
+        let delay = 0;
+        const typingSpeed = 8; // Adjust this value to control typing speed per character
+        const lineDelay = 500; // Adjust this value to control delay between lines
+
+        lines.forEach((line, index) => {
+            delay += lineDelay + (line.textContent.length * typingSpeed);
+            setTimeout(() => {
+                typeLine(line, typingSpeed);
+            }, delay);
+        });
+
+        function typeLine(line, speed) {
+            const htmlContent = line.innerHTML;
+            const textContent = line.textContent;
+            line.innerHTML = '';
+            line.style.display = 'inline-block';
+            let i = 0;
+            const interval = setInterval(() => {
+                if (i < textContent.length) {
+                    line.textContent += textContent.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(interval);
+                    line.innerHTML = htmlContent; // Replace with original HTML content after typing
+                }
+            }, speed);
+        }
+    </script>
+</body>
+</html>
